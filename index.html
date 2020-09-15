@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Imdb Movie Search">
+<meta itemprop="description" content="Web app that uses imdb api to search for movies">
+<meta itemprop="image" content="https://images-eu.ssl-images-amazon.com/images/I/315W5zxAnTL.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://imdb-movie-search.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Imdb Movie Search">
+<meta property="og:description" content="Web app that uses imdb api to search for movies">
+<meta property="og:image" itemprop="image" content="https://images-eu.ssl-images-amazon.com/images/I/315W5zxAnTL.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Imdb Movie Search">
+<meta name="twitter:description" content="Web app that uses imdb api to search for movies">
+<meta name="twitter:image" content="https://images-eu.ssl-images-amazon.com/images/I/315W5zxAnTL.png">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row">
+<div class="col-12 ">
+    <div class="jumbotron pb-1 mb-1" style="padding: 0px 10px ;">
+        <h1 class="display-4">The Shoppies</h1>
+        <hr class="my-3">
+        <p class="lead">Search for movies</p>
+        
+        
+        <div class="jumbotron p-3 mb-1 shadow-sm">
+         
+              <div class="d-flex align-items-center">
+                <input id="input-field" autofocus="" placeholder="Enter movie title" autocomplete="on" class="form-control mr-3" type="text" style="flex: 1;">
+                <input id="input-field2" placeholder="Optional Release Year" autocomplete="on" class="form-control mr-3" type="number" style="flex: 1;">
+                <button id="search" onclick="getmovies()" class="btn btn-primary">Search</button>
+              </div>
+        
+          </div>
+        </div>
+    </div>
+        </div>
+        
+        <div class="row" >
+<div class="col-md-4" style="text-align: center;"><img src="" id="poster" alt=""></div>
+<div class="col-md-8">
+
+    <dl class="row">
+        <dt class="col-sm-3"></dt>
+        <dd class="col-sm-9" id="Title"></dd>
+      
+        <dt class="col-sm-3"></dt>
+        <dd class="col-sm-9" id="Genre">
+      
+        </dd>
+      
+        <dt class="col-sm-3"></dt>
+        <dd class="col-sm-9" id="Actors"></dd>
+      
+        <dt class="col-sm-3 text-truncate"></dt>
+        <dd class="col-sm-9" id="Plot"></dd>
+      
+        <dt class="col-sm-3" id="info"></dt>
+        <dd class="col-sm-9">
+          <dl class="row">
+            <dt class="col-sm-4"></dt>
+            <dd class="col-sm-8" id="Ratings"></dd>
+          </dl>
+          <dl class="row">
+            <dt class="col-sm-4"></dt>
+            <dd class="col-sm-8" id="RunTime"></dd>
+          </dl>
+          <dl class="row">
+            <dt class="col-sm-4"></dt>
+            <dd class="col-sm-8" id="Director"></dd>
+          </dl>
+        </dd>
+      </dl>
+	  <dl>
+	   
+        <dd class="col-sm-9">
+          <dl class="row">
+            
+            <button id="nomi" onclick="listDisplay()" disabled  style="background:none; border:0px"></button>
+          </dl>
+        </dd>
+		<dt class="col-sm-9" id="nominateList"></dt>
+		
+		
+      </dl>
+	  
+
+</div>
+        </div>
+		
+			<div id="banner" style="padding:30px; font-size:50px"></div>
+	
+      </div>
+	  
+</body>
+</html>
